@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cadastrar_produtos.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="content-header">
+    <h1>Produtos cadastrados</h1>
+    <button>
+      <span class="material-icons"> add </span>
+      Novo produto</button>
+  </div>
+
+  <div>
+    <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="buscarProduto()">
+  </div>
+
+  <div class="content-table">
+    <table>
+      <thead>
+        <th>CÓDIGO</th>
+        <th>PRODUTO</th>
+        <th>QTD ATUAL</th>
+        <th>PREÇO UNITÁRIO</th>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+  <script src="cadastrar_produtos.js"></script>
+</body>
+
+</html>

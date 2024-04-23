@@ -1,0 +1,39 @@
+body {
+  background-color: #FFFFFF;
+}
+
+.content-header {
+  width: 75vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-table {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 50vw;
+  box-shadow: 4px 4px 50px 0px #00000026;
+  border-collapse: collapse;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #7A7786;
+}
+
+table th {
+  background-color: #F9F9F9;
+}
+
+.linha-par {
+  background-color: #F0F9FF;
+}
+
+.linha-impar {
+  background-color: #FFFFFF;
+}
