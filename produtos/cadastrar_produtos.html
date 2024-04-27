@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastrarP.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Cadastro de produtos</title>
+</head>
+
+<body>
+    <main>
+
+        <article class="section-all">
+            <header class="nav-header"><nav>aqui é o header</nav></header>
+
+            <section class="section-one">
+                <div class="section-main">
+                    <div><h1><span class="material-icons">reply_all</span> Cadastrar Produtos</h1><hr></hr></div>
+                    <div><h2>Dados do produto</h2></div>
+            
+                    <div class="form">
+                        <div><label for="name"> Nome:</label></div>
+                        <div class="input-date"><input id="name" class="quebra-linha" type="text" placeholder="Doritos" required></div>
+                        <div><label for="codigo"> Código:</label></div>
+                        <div class="input-cod"><input id="codigo" class="quebra-linha" type="number" placeholder="15" required></div>
+                        <div><label for="valor"> Preço unitario:</label></div>
+                        <div class="input-date"><input id="valor" class="quebra-linha" type="number" format="currency" precision="2" placeholder="R$ 5,50" required></div>
+                        <div><button>Cadastrar produto</button></div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
