@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="entrada_produtos.css">
+  <link rel="stylesheet" href="tabela_cadastro_produtos.css">
   <link rel="stylesheet" href="/style/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Entrada de produtos</title>
+  <title>Home</title>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
         <li><a href="/home/home.html">
             <span class="material-icons-outlined">home</span> Home
           </a></li>
-        <li><a href="/produtos/tabela_produtos.html">
+        <li><a href="/produtos/cadastro/tabela_cadastro_produtos.html" id="activate">
             <span class="material-icons">add_circle_outline</span> Cadastrar produtos
           </a></li>
-        <li><a href="/produtos/entrada_produtos.html" id="activate">
+        <li><a href="/produtos/entrada/tabela_entrada_produtos.html">
             <span class="material-icons">north_east</span> Entradas
           </a></li>
         <li><a href="#">
@@ -63,47 +63,31 @@
   </header>
 
   <main>
-    <article class="section-all">
-      <section class="section-one">
-        <div class="section-main">
-          <div>
-            <h1><span class="material-icons">reply_all</span> Entrada de produtos</h1>
-            <hr>
-            </hr>
-          </div>
-          <div>
-            <h2>Dados da entrada do produto</h2>
-          </div>
+    <a href="/produtos/cadastrar_produtos.html" class="content-header">
+      <h1>Produtos cadastrados</h1>
+      <button>
+        <span class="material-icons"> add </span>
+        Novo produto</button>
+    </a>
 
-          <div class="form">
-            <div><label for="produto"> Selecione o produto:</label>
-              <select id="produto">
-                <option class="produtos" label="Doritos"></option>
-                <option value="produtos" label="Guaraná"></option>
-                <option class="produtos" label="Coca-cola"></option>
-                <option value="produtos" label="Chettos"></option>
-              </select>
-            </div>
+    <div>
+      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="buscarProduto()">
+    </div>
 
-            <div><label for="codigo"> Código:</label><input id="codigo" class="quebra-linha" type="number"
-                placeholder="15" required></div>
-
-            <div><label for="qtd"> Qtd comprada:</label><input id="qtd" class="quebra-linha" type="number"
-                placeholder="R$ 2" required></div>
-
-            <div><label for="valor-uni"> Preço unitario:</label><input id="valor-uni" class="quebra-linha" type="number"
-                format="currency" precision="2" placeholder="R$ 5,50" required></div>
-
-            <div><label for="valor-total"> Valor da compra:</label><input id="valor-total" class="quebra-linha"
-                type="number" format="currency" precision="2" placeholder="R$ 11" required></div>
-
-            <div><button>Salvar entrada</button></div>
-          </div>
-        </div>
-      </section>
-    </article>
+    <div class="content-table">
+      <table>
+        <thead>
+          <th>CÓDIGO</th>
+          <th>PRODUTO</th>
+          <th>QTD ATUAL</th>
+          <th>PREÇO UNITÁRIO</th>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
   </main>
-  <script src="entrada_produtos.js"></script>
+  <script src="tabela_cadastro_produtos.js"></script>
 </body>
 
 </html>

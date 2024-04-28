@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="cadastrar_funcionario.css">
+  <link rel="stylesheet" href="cadastrar_produtos.css">
   <link rel="stylesheet" href="/style/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Cadastrar funcionário</title>
+  <title>Cadastro de produtos</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
         <li><a href="#">
             <span class="material-icons-outlined">leaderboard</span> Dashboard
           </a></li>
-        <li><a href="#" id="activate">
+        <li><a href="#">
             <span class="material-icons">people</span> Ver funcionários
           </a></li>
       </ul>
@@ -67,34 +67,33 @@
       <section class="section-one">
         <div class="section-main">
           <div>
-            <h1><span class="material-icons">reply_all</span> Cadastrar funcionários</h1>
+            <h1>
+              <a href="/produtos/cadastro/tabela_cadastro_produtos.html"><span class="material-icons">reply_all</span></a>
+              Cadastrar Produtos</h1>
             <hr>
             </hr>
           </div>
           <div>
-            <h2>Dados do funcionário</h2>
+            <h2>Dados do produto</h2>
           </div>
 
           <div class="form">
-            <div><label for="name"> Nome:</label><input id="name" class="quebra-linha" type="text" placeholder="digite"
-                required></div>
-
-            <div><label for="lastname"> Sobrenome:</label><input id="lastname" class="quebra-linha" type="text"
-                placeholder="digite" required></div>
-
-            <div><label for="email"> E-mail:</label><input id="email" class="quebra-linha" type="email"
-                placeholder="xxxx@xxxx.com" required></div>
-
-            <div><label for="number"> Contato:</label><input id="number" class="quebra-linha" type="tel"
-                placeholder="(xx)xxxx-xxxx"></div>
-
-            <div><button>Cadastar funcionário</button></div>
+            <div><label for="name"> Nome:</label></div>
+            <div class="input-date"><input id="name" class="quebra-linha" type="text" placeholder="Doritos" required>
+            </div>
+            <div><label for="codigo"> Código:</label></div>
+            <div class="input-cod"><input id="codigo" class="quebra-linha" type="number" placeholder="15" required>
+            </div>
+            <div><label for="valor"> Preço unitario:</label></div>
+            <div class="input-date"><input id="valor" class="quebra-linha" type="number" format="currency" precision="2"
+                placeholder="R$ 5,50" required></div>
+            <div><button>Cadastrar produto</button></div>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <script src="cadastrar_funcionario.js"></script>
+  <script src="cadastrar_produtos.js"></script>
 </body>
 
 </html>

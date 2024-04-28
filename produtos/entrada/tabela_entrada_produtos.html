@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tabela_produtos.css">
+  <link rel="stylesheet" href="tabela_entrada_produtos.css">
   <link rel="stylesheet" href="/style/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Home</title>
+  <title>Entrada de produtos</title>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
         <li><a href="/home/home.html">
             <span class="material-icons-outlined">home</span> Home
           </a></li>
-        <li><a href="/produtos/tabela_produtos.html" id="activate">
+        <li><a href="/produtos/cadastro/tabela_cadastro_produtos.html">
             <span class="material-icons">add_circle_outline</span> Cadastrar produtos
           </a></li>
-        <li><a href="/produtos/entrada_produtos.html">
+        <li><a href="/produtos/entrada/entrada_produtos.html" id="activate">
             <span class="material-icons">north_east</span> Entradas
           </a></li>
         <li><a href="#">
@@ -63,31 +63,10 @@
   </header>
 
   <main>
-    <a href="/produtos/cadastrar_produtos.html" class="content-header">
-      <h1>Produtos cadastrados</h1>
-      <button>
-        <span class="material-icons"> add </span>
-        Novo produto</button>
-    </a>
 
-    <div>
-      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="buscarProduto()">
-    </div>
 
-    <div class="content-table">
-      <table>
-        <thead>
-          <th>CÓDIGO</th>
-          <th>PRODUTO</th>
-          <th>QTD ATUAL</th>
-          <th>PREÇO UNITÁRIO</th>
-        </thead>
-        <tbody id="tbody">
-        </tbody>
-      </table>
-    </div>
   </main>
-  <script src="tabela_produtos.js"></script>
+  <script src="tabela_entrada_produtos.js"></script>
 </body>
 
 </html>

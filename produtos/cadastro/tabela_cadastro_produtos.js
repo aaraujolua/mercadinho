@@ -21,7 +21,7 @@ function obterListaProdutos() {
       quantidade: 20,
       preco: 250.0
     },
-  ]
+  ];
 
   return listaProdutos;
 }

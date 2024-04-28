@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="cadastrar_produtos.css">
+  <link rel="stylesheet" href="entrada_produtos.css">
   <link rel="stylesheet" href="/style/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Cadastro de produtos</title>
+  <title>Entrada de produtos</title>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
         <li><a href="/home/home.html">
             <span class="material-icons-outlined">home</span> Home
           </a></li>
-        <li><a href="/produtos/tabela_produtos.html" id="activate">
+        <li><a href="/produtos/cadastro/tabela_cadastro_produtos.html">
             <span class="material-icons">add_circle_outline</span> Cadastrar produtos
           </a></li>
-        <li><a href="/produtos/entrada_produtos.html">
+        <li><a href="/produtos/entrada/entrada_produtos.html" id="activate">
             <span class="material-icons">north_east</span> Entradas
           </a></li>
         <li><a href="#">
@@ -67,33 +67,43 @@
       <section class="section-one">
         <div class="section-main">
           <div>
-            <h1>
-              <a href="/produtos/tabela_produtos.html"><span class="material-icons">reply_all</span></a>
-              Cadastrar Produtos</h1>
+            <h1><span class="material-icons">reply_all</span> Entrada de produtos</h1>
             <hr>
             </hr>
           </div>
           <div>
-            <h2>Dados do produto</h2>
+            <h2>Dados da entrada do produto</h2>
           </div>
 
           <div class="form">
-            <div><label for="name"> Nome:</label></div>
-            <div class="input-date"><input id="name" class="quebra-linha" type="text" placeholder="Doritos" required>
+            <div><label for="produto"> Selecione o produto:</label>
+              <select id="produto">
+                <option class="produtos" label="Doritos"></option>
+                <option value="produtos" label="Guaraná"></option>
+                <option class="produtos" label="Coca-cola"></option>
+                <option value="produtos" label="Chettos"></option>
+              </select>
             </div>
-            <div><label for="codigo"> Código:</label></div>
-            <div class="input-cod"><input id="codigo" class="quebra-linha" type="number" placeholder="15" required>
-            </div>
-            <div><label for="valor"> Preço unitario:</label></div>
-            <div class="input-date"><input id="valor" class="quebra-linha" type="number" format="currency" precision="2"
-                placeholder="R$ 5,50" required></div>
-            <div><button>Cadastrar produto</button></div>
+
+            <div><label for="codigo"> Código:</label><input id="codigo" class="quebra-linha" type="number"
+                placeholder="15" required></div>
+
+            <div><label for="qtd"> Qtd comprada:</label><input id="qtd" class="quebra-linha" type="number"
+                placeholder="R$ 2" required></div>
+
+            <div><label for="valor-uni"> Preço unitario:</label><input id="valor-uni" class="quebra-linha" type="number"
+                format="currency" precision="2" placeholder="R$ 5,50" required></div>
+
+            <div><label for="valor-total"> Valor da compra:</label><input id="valor-total" class="quebra-linha"
+                type="number" format="currency" precision="2" placeholder="R$ 11" required></div>
+
+            <div><button>Salvar entrada</button></div>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <script src="cadastrar_produtos.js"></script>
+  <script src="entrada_produtos.js"></script>
 </body>
 
 </html>
