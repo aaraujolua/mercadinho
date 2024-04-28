@@ -25,7 +25,7 @@
         <li><a href="/produtos/cadastro/tabela_cadastro_produtos.html">
             <span class="material-icons">add_circle_outline</span> Cadastrar produtos
           </a></li>
-        <li><a href="/produtos/entrada/entrada_produtos.html" id="activate">
+        <li><a href="/produtos/entrada/tabela_entrada_produtos.html" id="activate">
             <span class="material-icons">north_east</span> Entradas
           </a></li>
         <li><a href="#">
@@ -63,8 +63,33 @@
   </header>
 
   <main>
+    <div class="content-header">
+      <h1>Entrada de produtos</h1>
+      <a href="/produtos/entrada/entrada_produtos.html">
+        <button>
+          <span class="material-icons"> add </span>
+          Entradas</button>
+      </a>
+    </div>
 
+    <div>
+      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="buscarProduto()">
+    </div>
 
+    <div class="content-table">
+      <table>
+        <thead>
+          <th>CÓDIGO</th>
+          <th>PRODUTO</th>
+          <th>DATA DA ENTRADA</th>
+          <th>QTD COMPRADA</th>
+          <th>PREÇO UNITÁRIO</th>
+          <th>VALOR DA COMPRA</th>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
   </main>
   <script src="tabela_entrada_produtos.js"></script>
 </body>
