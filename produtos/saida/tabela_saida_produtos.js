@@ -4,37 +4,38 @@ construirTabela(lista);
 function obterListaProdutos() {
   let listaProdutos = [
     {
-      id: 1,
-      nome: "Aaaa",
+      id_produto: 1,
+      id_venda: 1,
+      nome_funcionario: "Aaaa - 1",
+      nome_produto: "Aaaa - 2",
       data: new Date(),
       quantidade: 5,
-      preco: 50.0
+      valor: 50.0,
+      forma_pagamento: "crédito"
     },
     {
-      id: 2,
-      nome: "Bbbb",
+      id_produto: 2,
+      id_venda: 2,
+      nome_funcionario: "Bbbb - 1",
+      nome_produto: "Bbbb - 2",
       data: new Date(),
       quantidade: 10,
-      preco: 100.0
+      valor: 100.0,
+      forma_pagamento: "crédito"
     },
     {
-      id: 3,
-      nome: "Cccc",
+      id_produto: 3,
+      id_venda: 3,
+      nome_funcionario: "Cccc - 1",
+      nome_produto: "Cccc - 2",
       data: new Date(),
       quantidade: 20,
-      preco: 250.0
+      valor: 250.0,
+      forma_pagamento: "crédito"
     },
   ];
 
-  atribuirValorTotal(listaProdutos);
-
   return listaProdutos;
-}
-
-function atribuirValorTotal(listaProdutos) {
-  for (let i = 0; i < listaProdutos.length; i++) {
-    listaProdutos[i].valorTotal = (listaProdutos[i].quantidade * listaProdutos[i].preco);
-  }
 }
 
 function construirTabela(listaProdutos) {
@@ -64,26 +65,32 @@ function construirTabela(listaProdutos) {
       row.setAttribute('class', 'linha-impar');
     }
 
-    let td_id = document.createElement('td');
-    let td_nome = document.createElement('td');
+    let td_id_produto = document.createElement('td');
+    let td_id_venda = document.createElement('td');
+    let td_nome_funcionario = document.createElement('td');
+    let td_nome_produto = document.createElement('td');
     let td_data = document.createElement('td');
     let td_quantidade = document.createElement('td');
-    let td_preco = document.createElement('td');
-    let td_valor_total = document.createElement('td');
+    let td_valor = document.createElement('td');
+    let td_forma_pagamento = document.createElement('td');
 
-    td_id.innerText = listaProdutos[i].id;
-    td_nome.innerText = listaProdutos[i].nome;
-    td_data.innerText = listaProdutos[i].data;    
+    td_id_produto.innerText = listaProdutos[i].id_produto;
+    td_id_venda.innerText = listaProdutos[i].id_venda;
+    td_nome_funcionario.innerText = listaProdutos[i].nome_funcionario;
+    td_nome_produto.innerText = listaProdutos[i].nome_produto;
+    td_data.innerText = listaProdutos[i].data;
     td_quantidade.innerText = listaProdutos[i].quantidade;
-    td_preco.innerText = listaProdutos[i].preco;
-    td_valor_total.innerText = listaProdutos[i].valorTotal;
+    td_valor.innerText = listaProdutos[i].valor;
+    td_forma_pagamento.innerText = listaProdutos[i].forma_pagamento;
 
-    row.appendChild(td_id);
-    row.appendChild(td_nome);
+    row.appendChild(td_id_produto);
+    row.appendChild(td_id_venda);
+    row.appendChild(td_nome_funcionario);
+    row.appendChild(td_nome_produto);
     row.appendChild(td_data);
     row.appendChild(td_quantidade);
-    row.appendChild(td_preco);
-    row.appendChild(td_valor_total);
+    row.appendChild(td_valor);
+    row.appendChild(td_forma_pagamento);
   }
 }
 

@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tabela_entrada_produtos.css">
+  <link rel="stylesheet" href="tabela_saida_produtos.css">
   <link rel="stylesheet" href="/style/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Entrada de produtos</title>
+  <title>Saída de produtos</title>
 </head>
 
 <body>
@@ -25,10 +25,10 @@
         <li><a href="/produtos/cadastro/tabela_produtos_cadastrados.html">
             <span class="material-icons">add_circle_outline</span> Cadastrar produtos
           </a></li>
-        <li><a href="/produtos/entrada/tabela_entrada_produtos.html" id="activate">
+        <li><a href="/produtos/entrada/tabela_entrada_produtos.html">
             <span class="material-icons">north_east</span> Entradas
           </a></li>
-        <li><a href="/produtos/saida/tabela_saida_produtos.html">
+        <li><a href="/produtos/saida/tabela_saida_produtos.html" id="activate">
             <span class="material-icons">south_west</span> Saídas
           </a></li>
         <li><a href="#">
@@ -64,34 +64,31 @@
 
   <main>
     <div class="content-header">
-      <h1>Entrada de produtos</h1>
-      <a href="/produtos/entrada/entrada_produtos.html">
-        <button>
-          <span class="material-icons"> add </span>
-          Entradas</button>
-      </a>
+      <h1>Saída de produtos</h1>
     </div>
 
     <div>
-      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="buscarProduto()">
+      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar saída" onkeyup="buscarProduto()">
     </div>
 
     <div class="content-table">
       <table>
         <thead>
-          <th>CÓDIGO</th>
+          <th>CÓDIGO DO PRODUTO</th>
+          <th>CÓDIGO DA VENDA</th>
+          <th>FUNCIONÁRIO(A)</th>
           <th>PRODUTO</th>
-          <th>DATA DA ENTRADA</th>
+          <th>DATA DA SAÍDA</th>
           <th>QTD COMPRADA</th>
-          <th>PREÇO UNITÁRIO</th>
           <th>VALOR DA COMPRA</th>
+          <th>FORMA DE PAGAMENTO</th>
         </thead>
         <tbody id="tbody">
         </tbody>
       </table>
     </div>
   </main>
-  <script src="tabela_entrada_produtos.js"></script>
+  <script src="tabela_saida_produtos.js"></script>
 </body>
 
 </html>

@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tabela_entrada_produtos.css">
+  <link rel="stylesheet" href="tabela_funcionarios_cadastrados.css">
   <link rel="stylesheet" href="/style/header.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Entrada de produtos</title>
+  <title>Funcionários(as) cadastrados(as)</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
         <li><a href="/produtos/cadastro/tabela_produtos_cadastrados.html">
             <span class="material-icons">add_circle_outline</span> Cadastrar produtos
           </a></li>
-        <li><a href="/produtos/entrada/tabela_entrada_produtos.html" id="activate">
+        <li><a href="/produtos/entrada/tabela_entrada_produtos.html">
             <span class="material-icons">north_east</span> Entradas
           </a></li>
         <li><a href="/produtos/saida/tabela_saida_produtos.html">
@@ -40,7 +40,7 @@
         <li><a href="#">
             <span class="material-icons-outlined">leaderboard</span> Dashboard
           </a></li>
-        <li><a href="/funcionarios/tabela_funcionarios_cadastrados.html">
+        <li><a href="/funcionarios/tabela_funcionarios_cadastrados.html" id="activate">
             <span class="material-icons">people</span> Ver funcionários
           </a></li>
       </ul>
@@ -64,34 +64,33 @@
 
   <main>
     <div class="content-header">
-      <h1>Entrada de produtos</h1>
-      <a href="/produtos/entrada/entrada_produtos.html">
+      <h1>Funcionários(as)</h1>
+      <a href="/funcionarios/cadastrar_funcionario.html">
         <button>
           <span class="material-icons"> add </span>
-          Entradas</button>
+          Cadastrar funcionário</button>
       </a>
     </div>
 
     <div>
-      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="buscarProduto()">
+      <input type="text" id="searchbar" name="searchbar" placeholder="Pesquisar funcionário(a)" onkeyup="buscarFuncionario()">
     </div>
 
     <div class="content-table">
       <table>
         <thead>
-          <th>CÓDIGO</th>
-          <th>PRODUTO</th>
-          <th>DATA DA ENTRADA</th>
-          <th>QTD COMPRADA</th>
-          <th>PREÇO UNITÁRIO</th>
-          <th>VALOR DA COMPRA</th>
+          <th>NOME</th>
+          <th>EMAIL</th>
+          <th>CONTATO</th>
+          <th>STATUS</th>
+          <th></th>
         </thead>
         <tbody id="tbody">
         </tbody>
       </table>
     </div>
   </main>
-  <script src="tabela_entrada_produtos.js"></script>
+  <script src="tabela_funcionarios_cadastrados.js"></script>
 </body>
 
 </html>
